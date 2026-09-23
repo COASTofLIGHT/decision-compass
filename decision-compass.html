@@ -133,7 +133,7 @@
   </div>
 </button>
 
-<div class="hint" id="hint">tap to roll</div>
+<div class="hint" id="hint">tap to begin</div>
 <div class="count" id="count"></div>
 
 <script>
@@ -197,12 +197,9 @@
   }
 
   (function init() {
-    const idx = pickIndex(-1, perspectives.length);
-    lastIdx = idx;
-    shown = 1;
-    labelEl.textContent = perspectives[idx].label;
-    sentenceEl.textContent = perspectives[idx].prompt;
-    countEl.textContent = shown + " / " + perspectives.length;
+    labelEl.textContent = '';
+    sentenceEl.textContent = 'Tap to start analysing.';
+    countEl.textContent = '';
   })();
 
   stageEl.addEventListener('click', next);
